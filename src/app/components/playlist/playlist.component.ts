@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Cancion } from '../cancion';
-import { Playlist } from '../playlist';
+import { Song } from '../../interfaces/song';
+// import { Playlist } from '../../playlist';
 
 @Component({
   selector: 'app-playlist',
@@ -10,11 +10,11 @@ import { Playlist } from '../playlist';
 
 export class PlaylistComponent implements OnInit {
 
-  cancion=Playlist;
+  // cancion=Playlist;
 
-  selectedCancion?: Cancion;
+  selectedCancion?: Song;
 
-  onSelect(cancion: Cancion): void {
+  onSelect(cancion: Song): void {
     this.selectedCancion = cancion;
   }
 

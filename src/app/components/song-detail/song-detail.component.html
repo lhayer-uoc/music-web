@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngIf="!song || !song.title; else songDetails">
+    <span>{{noSong}}</span>
+  </div>
+  <ng-template #songDetails>
+    <div>
+      <span>Fecha de lanzamiento: {{ song.releaseDate}}</span>
+      <span>{{ song.title}}</span>
+      <span>{{ song.author}}</span>
+      <span>{{ song.year}}</span>
+      <span>{{ song.album}}</span>
+      <span>{{ song.genre}}</span>
+    </div>
+  </ng-template>
+</div>
