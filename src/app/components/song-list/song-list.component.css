@@ -3,15 +3,21 @@
 .container {
   color: #fff;
   padding-left: 20px;
+  height: calc(100% - 80px);
+  flex: 1;
+  height: 98%;
 }
 
 .header {
 }
 
 .content {
+  height: 0;
+  flex: 1;
 }
 
 .list {
+  flex: 1;
 }
 
 .list .list-header {
@@ -27,6 +33,8 @@
 }
 
 .list .list-content {
+  overflow-y: auto;
+  flex: 1;
 }
 
 .song-container {
