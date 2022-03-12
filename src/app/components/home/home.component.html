@@ -1,1 +1,12 @@
-<app-song-detail [song]="songSelected"></app-song-detail>
+<div class="flex flex-column container w100">
+  <app-header></app-header>
+  <div class="flex content">
+    <div class="w12">
+      <app-menu></app-menu>
+    </div>
+    <div class="w88 flex">
+      <app-song-list class="w60" (selectedSong)="onSongSelected($event)"></app-song-list>
+      <app-song-detail class="w40" [song]="songSelected"></app-song-detail>
+    </div>
+  </div>
+</div>

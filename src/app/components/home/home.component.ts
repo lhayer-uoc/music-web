@@ -10,26 +10,13 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  songSelected: Song = {
-    track: 0,
-    title: '',
-    author: '',
-    year: 0,
-    country: '',
-    album: '',
-    genre: ''
-  };
+  songSelected: Song;
 
   ngOnInit(): void {
-    this.songSelected = {
-      track: 1,
-      title: 'Imperium',
-      author: 'Thom Jurek',
-      year: 2022,
-      country: '',
-      album: 'Impera',
-      genre: 'Pop/Rock'
-    };
+  }
+
+  public onSongSelected(song: Song): void {
+    this.songSelected = song;
   }
 
 }

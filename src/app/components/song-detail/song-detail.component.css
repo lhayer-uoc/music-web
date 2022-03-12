@@ -1,4 +1,11 @@
+@import "../../../styles/flex.css";
+
+.container {
+  color: #fff;
+  padding-left: 20px;
+}
+
 .song-detail {
-  display: flex;
-  flex-direction: column;
+  padding-left: 20px;
+  margin: 10px 0;
 }
