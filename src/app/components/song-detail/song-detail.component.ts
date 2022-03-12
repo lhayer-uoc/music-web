@@ -8,17 +8,9 @@ import { Song } from 'src/app/interfaces/song';
 })
 export class SongDetailComponent implements OnInit {
 
-  @Input() song: Song = {
-    track: 0,
-    title: '',
-    author: '',
-    year: 0,
-    country: '',
-    album: '',
-    genre: ''
-  };
+  @Input() song: Song;
 
-  noSong: string = 'No hay canciones seleccionadas';
+  noSong: string = 'No se ha seleccionado ninguna canción';
 
   constructor() { }
 
