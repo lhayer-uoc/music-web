@@ -6,8 +6,7 @@
     </div>
     <div class="w88 flex">
       <app-song-list class="w60" (selectedSong)="onSongSelected($event)"></app-song-list>
-      <div class="w40"></div>
+      <app-song-detail class="w40" [song]="songSelected"></app-song-detail>
     </div>
-
   </div>
 </div>

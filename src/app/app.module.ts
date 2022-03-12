@@ -8,6 +8,7 @@ import { SongListComponent } from './components/song-list/song-list.component';
 import { SongRowComponent } from './components/song-row/song-row.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SongDetailComponent } from './components/song-detail/song-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MenuComponent } from './components/menu/menu.component';
     SongListComponent,
     SongRowComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    SongDetailComponent
   ],
   imports: [
     BrowserModule,

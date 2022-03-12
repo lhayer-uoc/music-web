@@ -1,8 +1,9 @@
 export interface Song {
-    releaseDate: string;
-    title:string;
-    author:string;
-    year:number;
-    album:string;
-    genre:string;
-  }
+  track:number;
+  title:string;
+  author:string;
+  year:number;
+  country:string;
+  album:string;
+  genre:string;
+}
