@@ -1,0 +1,16 @@
+<div class="container">
+  <div *ngIf="!song || !song.title; else songDetails">
+    <span>{{noSong}}</span>
+  </div>
+  <ng-template #songDetails>
+    <div class="song-detail">
+      <span><strong>Número de pista:</strong> {{ song.track}}</span>
+      <span><strong>Título:</strong> {{ song.title}}</span>
+      <span><strong>Autor:</strong> {{ song.author}}</span>
+      <span><strong>Año:</strong> {{ song.year}}</span>
+      <span><strong>País:</strong> {{ song.country}}</span>
+      <span><strong>Album:</strong> {{ song.album}}</span>
+      <span><strong>Genero:</strong> {{ song.genre}}</span>
+    </div>
+  </ng-template>
+</div>
