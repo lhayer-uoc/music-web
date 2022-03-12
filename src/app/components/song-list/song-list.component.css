@@ -1,0 +1,47 @@
+@import "../../../styles/flex.css";
+
+.container {
+  color: #fff;
+  padding-left: 20px;
+}
+
+.header {
+}
+
+.content {
+}
+
+.list {
+}
+
+.list .list-header {
+  padding-left: 20px;
+}
+
+.separator {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.list .list-content {
+}
+
+.song-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px 5px;
+  padding-left: 20px;
+}
+
+.song-container:hover {
+  background-color: #16a085;
+}
+
+.no-songs-container {
+}
+
+.no-songs-container.no-songs {
+}

@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="flex flex-column container w100">
+  <app-header></app-header>
+  <div class="flex">
+    <div class="w12">
+      <app-menu></app-menu>
+    </div>
+    <div class="w88 flex">
+      <app-song-list class="w60" (selectedSong)="onSongSelected($event)"></app-song-list>
+      <div class="w40"></div>
+    </div>
+
+  </div>
+</div>

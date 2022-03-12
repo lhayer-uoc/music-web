@@ -1,0 +1,33 @@
+<div class="flex flex-column container">
+  <div class="header">
+    <h3>{{title}}</h3>
+  </div>
+  <div class="content">
+    <div class="flex flex-column list" *ngIf="songList && songList.length; else noSongs">
+      <div class="flex list-header">
+        <div class="w33">
+          <span># TÍTULO</span>
+        </div>
+        <div class="w33">
+          <span>ALBUM</span>
+        </div>
+        <div class="w33">
+          <span>GENERO</span>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="flex flex-column list-content">
+        <div class="w100calc song-container" *ngFor="let song of songList" (click)="onSelectSong(song)">
+          <app-song-row [song]="song"></app-song-row>
+        </div>
+      </div>
+    </div>
+    <ng-template #noSongs>
+      <div class="no-songs-container">
+        <span class="no-songs">
+          {{noSongsMessage}}
+        </span>
+      </div>
+    </ng-template>
+  </div>
+</div>

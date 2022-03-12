@@ -1,0 +1,7 @@
+@import "../../../styles/flex.css";
+
+.container {
+  background-color: #34495e;
+  max-height: 100vh;
+  overflow: hidden;
+}

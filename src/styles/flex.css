@@ -65,3 +65,46 @@
 .justify-content-around {
   justify-content: space-around;
 }
+
+.w12 {
+  width: 12%;
+}
+
+.w25 {
+  width: 25%;
+}
+.w33 {
+  width: 33.3%;
+}
+
+.w33calc {
+  width: calc(33.3% - 20px);
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.w60 {
+  width: 60%;
+}
+
+.w75 {
+  width: 75%;
+}
+
+.w88 {
+  width: 88%;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w100calc {
+  width: calc(100% - 20px);
+}
