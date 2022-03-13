@@ -1,0 +1,20 @@
+@import "../../../styles/flex.css";
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  height: 100%;
+}
+
+.separator {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.item:hover {
+  font-weight: bold;
+  cursor: pointer;
+}

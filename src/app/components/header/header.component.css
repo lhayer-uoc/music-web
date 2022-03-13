@@ -1,0 +1,7 @@
+@import "../../../styles/flex.css";
+
+.container {
+  height: 80px;
+  background-color: #1abc9c;
+  font-size: 28px;
+}
