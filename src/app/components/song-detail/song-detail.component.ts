@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Song } from 'src/app/interfaces/song';
 
+
 @Component({
   selector: 'app-song-detail',
   templateUrl: './song-detail.component.html',
