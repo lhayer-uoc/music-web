@@ -8,6 +8,29 @@
   height: 98%;
 }
 
+.list-title {
+  flex: 2;
+}
+
+.filter-container {
+  flex: 1;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.filter-container input {
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+  background: transparent;
+  font-size: medium;
+  color: rgba(255, 255, 255, 0.9);
+  flex: 1;
+}
+
+.filter-container label {
+  margin-right: 10px;
+}
+
 .content {
   height: 0;
   flex: 1;

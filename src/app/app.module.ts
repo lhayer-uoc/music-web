@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { SongListComponent } from './components/song-list/song-list.component';
 import { SongRowComponent } from './components/song-row/song-row.component';
@@ -18,11 +19,12 @@ import { SongDetailComponent } from './components/song-detail/song-detail.compon
     SongRowComponent,
     HeaderComponent,
     MenuComponent,
-    SongDetailComponent
+    SongDetailComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
