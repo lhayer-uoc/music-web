@@ -9,6 +9,8 @@ import { SongRowComponent } from './components/song-row/song-row.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SongDetailComponent } from './components/song-detail/song-detail.component';
+import { ReproductorComponent } from './components/reproductor/reproductor.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { SongDetailComponent } from './components/song-detail/song-detail.compon
     SongRowComponent,
     HeaderComponent,
     MenuComponent,
-    SongDetailComponent
+    SongDetailComponent,
+    ReproductorComponent,
   ],
   imports: [
     BrowserModule,

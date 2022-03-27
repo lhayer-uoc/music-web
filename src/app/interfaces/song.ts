@@ -6,4 +6,6 @@ export interface Song {
   country:string;
   album:string;
   genre:string;
+  cover_img: string;
+  localPath: string;
 }

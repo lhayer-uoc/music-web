@@ -1,0 +1,25 @@
+<div class="reproductor" *ngIf="selectedSong">
+
+    <div class="cover">
+        <img class="img" src="assets/images/{{getSongDetails(selectedSong.track).cover_img}}" />
+    </div>
+
+    <div class="info">
+        <div class="infoTitle">{{selectedSong.title}}</div>
+        <div class="infoAuthor">{{selectedSong.author}}</div>
+    </div>
+    <!-- <div class="btn">
+        <img class="botones" src="assets/images/aleatorio.png"(click)="onRandom()"/>
+        <img class="botones rotate" src="assets/images/alante.png" (click)="onBack()"/>
+        <img class="botones" *ngIf="stop" src="assets/images/play.png" (click)="onPlay()" />
+        <img class="botones" *ngIf="!stop" src="assets/images/pausa.png" (click)="onPause()">  
+        <img class="botones" src="assets/images/alante.png" (click)="onNext()"/> 
+        <img class="botones" src="assets/images/repetir.png" (click)="onLoop()"/>
+    </div> -->
+    <div class="btn">
+        <audio class="player" src="{{getSongCompleteLocalPath(selectedSong.track)}}" type="audio/mp3" controls autoplay></audio>
+    </div>
+    <!-- <div class="barra">
+        <input type="range" min="1" max="100" value="50">
+    </div> -->
+</div>
