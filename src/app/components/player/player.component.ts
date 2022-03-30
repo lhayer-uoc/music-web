@@ -22,41 +22,16 @@ export class PlayerComponent implements OnInit, OnDestroy {
   }
 
 
+  /*Método para conseguir la ruta de la canción
+  
   getSongCompleteLocalPath(): string {
     if (this.selectedSong) {
       const songLocalPath = this.selectedSong.localPath;
-      const prefix = 'assets/music/'
-      return `${prefix}/${songLocalPath}`;
+      return `${songLocalPath}`;
     }
     return '';
 
-  }
-
- onPlay(){
-     /*this.audio.play();
-    this.interval = setInterval(function () {
-      //do nothing. this just keeps the bar refreshing
-    }, 1000);
-    this.stop = false;*/
-  }
-  onPause(){
-    /*clearInterval(this.interval);
-    this.audio.pause();
-    this.stop = true;*/
-  }
-
-  onRandom(){
-
-  }
-  onBack(){
-
-  }
-  onNext(){
-
-  }
-  onLoop(){
-
-  }
+  }*/
 
   ngOnDestroy(): void {
       if (this.currentSelectedSongSubscription) {

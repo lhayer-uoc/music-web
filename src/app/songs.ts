@@ -3,17 +3,17 @@ import {Song} from 'src/app/interfaces/song';
 export const SONGS : Song[] =[
 
     {
-      title: 'nombre 1',
-      author: 'autor 1',
+      title: 'Fight Back',
+      author: 'Neffex',
       year: 2022,
-      album: 'álbum 1',
-      genre: 'rock',
-      country: '',
-      track: 0,
-      cover_img: 'xxxx',
-      localPath: 'xxxx',
+      album: 'Fight Back',
+      genre: 'Rap',
+      country: 'USA',
+      track: 1,
+      cover_img: 'src\assets\images\neffex.png',
+      localPath: 'src\assets\songs\Fight Back.mp3',
     },
-    {
+    /*{
       title: 'nombre 2',
       author: 'autor 2',
       year: 2022,
@@ -166,6 +166,6 @@ export const SONGS : Song[] =[
       track: 0,
       cover_img: 'xxxx',
       localPath: 'xxxx',
-    },
+    },*/
 
 ]
