@@ -10,6 +10,8 @@ export const SONGS : Song[] =[
       genre: 'rock',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 2',
@@ -19,6 +21,8 @@ export const SONGS : Song[] =[
       genre: 'pop',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 3',
@@ -28,6 +32,8 @@ export const SONGS : Song[] =[
       genre: 'metal',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 4',
@@ -37,6 +43,8 @@ export const SONGS : Song[] =[
       genre: 'country',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 5',
@@ -46,6 +54,8 @@ export const SONGS : Song[] =[
       genre: 'death metal',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 6',
@@ -55,6 +65,8 @@ export const SONGS : Song[] =[
       genre: 'metal',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 7',
@@ -64,6 +76,8 @@ export const SONGS : Song[] =[
       genre: 'rock',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 8',
@@ -73,6 +87,8 @@ export const SONGS : Song[] =[
       genre: 'pop',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 9',
@@ -82,6 +98,8 @@ export const SONGS : Song[] =[
       genre: 'indie',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 10',
@@ -91,6 +109,8 @@ export const SONGS : Song[] =[
       genre: 'soft rock',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 11',
@@ -100,6 +120,8 @@ export const SONGS : Song[] =[
       genre: 'soft rock',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 12',
@@ -109,6 +131,8 @@ export const SONGS : Song[] =[
       genre: 'blues',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 13',
@@ -118,6 +142,8 @@ export const SONGS : Song[] =[
       genre: 'blues',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 14',
@@ -127,6 +153,8 @@ export const SONGS : Song[] =[
       genre: 'rock',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 15',
@@ -136,6 +164,8 @@ export const SONGS : Song[] =[
       genre: 'electronic',
       country: '',
       track: 0,
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
 
 ]
