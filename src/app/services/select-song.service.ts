@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { ReplaySubject, Subject } from 'rxjs';
 import { Song } from '../interfaces/song';
-import { SONGS } from '../songs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SelectedSongService{
 
-  private selectedSong = new BehaviorSubject<Song>(null as unknown as Song);
+  private selectedSong: Subject<Song> = new ReplaySubject<Song>(1);
   currentSelectedSong = this.selectedSong.asObservable();
 
   constructor() { }

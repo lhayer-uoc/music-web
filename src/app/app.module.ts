@@ -10,7 +10,7 @@ import { SongRowComponent } from './components/song-row/song-row.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SongDetailComponent } from './components/song-detail/song-detail.component';
-import { ReproductorComponent } from './components/reproductor/reproductor.component';
+import { PlayerComponent } from './components/player/player.component';
 
 
 @NgModule({
@@ -22,7 +22,7 @@ import { ReproductorComponent } from './components/reproductor/reproductor.compo
     HeaderComponent,
     MenuComponent,
     SongDetailComponent,
-    ReproductorComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,
