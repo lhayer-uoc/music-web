@@ -13,7 +13,7 @@ export const SONGS : Song[] =[
       cover_img: 'src\assets\images\neffex.png',
       localPath: 'src\assets\songs\Fight Back.mp3',
     },
-    /*{
+    {
       title: 'nombre 2',
       author: 'autor 2',
       year: 2022,
@@ -166,6 +166,6 @@ export const SONGS : Song[] =[
       track: 0,
       cover_img: 'xxxx',
       localPath: 'xxxx',
-    },*/
+    }
 
 ]

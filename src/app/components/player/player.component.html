@@ -1,25 +1,21 @@
 <div class="container" *ngIf="selectedSong">
-
     <div class="cover">
-        <img class="img" src="assets/images/neffex.png" />
+      <img class="img" src="assets/images/neffex.png" />
     </div>
 
     <div class="info">
-        <div class="infoTitle">{{selectedSong.title}}</div>
-        <div class="infoAuthor">{{selectedSong.author}}</div>
+      <div class="infoTitle">{{selectedSong.title}}</div>
+      <div class="infoAuthor">{{selectedSong.author}}</div>
     </div>
     <div class="btn">
-        <img class="button" src="assets/images/aleatorio.png" />
-        <img class="button rotate" src="assets/images/alante.png" />
-        <img class="button" *ngIf="stop" src="assets/images/play.png" />
-        <img class="button" *ngIf="!stop" src="assets/images/pausa.png">
-        <img class="button" src="assets/images/alante.png" />
-        <img class="button" src="assets/images/repetir.png" />
+      <img class="button" src="assets/images/aleatorio.png" />
+      <img class="button rotate" src="assets/images/alante.png" />
+      <img class="button" *ngIf="stop" src="assets/images/play.png" />
+      <img class="button" *ngIf="!stop" src="assets/images/pausa.png">
+      <img class="button" src="assets/images/alante.png" />
+      <img class="button" src="assets/images/repetir.png" />
     </div>
     <div class="btn">
-        <audio class="player" src="assets/songs/Fight Back.mp3" type="audio/mp3" controls autoplay></audio>
-    </div>
-    <div class="bar">
-        <input type="range" min="1" max="100" value="50">
+      <audio class="player" src="assets/songs/Fight Back.mp3" type="audio/mp3" controls autoplay></audio>
     </div>
 </div>
