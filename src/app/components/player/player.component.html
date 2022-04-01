@@ -1,0 +1,19 @@
+<div class="container" *ngIf="selectedSong">
+    <div class="cover">
+      <img class="img" src="assets/images/neffex.png" />
+    </div>
+
+    <div class="info">
+      <div class="infoTitle">{{selectedSong.title}}</div>
+      <div class="infoAuthor">{{selectedSong.author}}</div>
+    </div>
+    <div class="btn">
+      <img class="button" src="assets/images/aleatorio.png" />
+      <img class="button rotate" src="assets/images/alante.png" />
+      <img class="button" src="assets/images/alante.png" />
+      <img class="button" src="assets/images/repetir.png" />
+    </div>
+    <div class="btn">
+      <audio class="player" src="assets/songs/Fight Back.mp3" type="audio/mp3" controls autoplay></audio>
+    </div>
+</div>

@@ -9,4 +9,6 @@ export interface Song {
   genre:string;
   rating:number;
   url:string;
+  cover_img: string;
+  localPath: string;
 }

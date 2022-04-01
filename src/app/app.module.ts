@@ -10,6 +10,8 @@ import { SongRowComponent } from './components/song-row/song-row.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SongDetailComponent } from './components/song-detail/song-detail.component';
+import { PlayerComponent } from './components/player/player.component';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { SongDetailComponent } from './components/song-detail/song-detail.compon
     HeaderComponent,
     MenuComponent,
     SongDetailComponent,
+    PlayerComponent,
   ],
   imports: [
     BrowserModule,

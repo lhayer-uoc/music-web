@@ -4,14 +4,16 @@ import {Song} from 'src/app/interfaces/song';
 export const SONGS : Song[] =[
 
     {
-      title: 'nombre 1',
-      author: 'autor 1',
+      title: 'Fight Back',
+      author: 'Neffex',
       duration: 5,
       year: 2022,
-      album: 'álbum 1',
-      genre: 'rock',
-      country: '',
-      track: 0,
+      album: 'Fight Back',
+      genre: 'Rap',
+      country: 'USA',
+      track: 1,
+      cover_img: 'src\assets\images\neffex.png',
+      localPath: 'src\assets\songs\Fight Back.mp3',
       rating: 2,
       url: '',
     },
@@ -26,6 +28,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 3',
@@ -38,6 +42,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 4',
@@ -50,6 +56,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 5',
@@ -62,6 +70,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 6',
@@ -74,6 +84,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 7',
@@ -86,6 +98,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 8',
@@ -98,6 +112,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 9',
@@ -110,6 +126,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 10',
@@ -122,6 +140,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 11',
@@ -134,6 +154,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 12',
@@ -146,6 +168,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 13',
@@ -158,6 +182,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 14',
@@ -170,6 +196,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
     },
     {
       title: 'nombre 15',
@@ -182,6 +210,8 @@ export const SONGS : Song[] =[
       track: 0,
       rating: 2,
       url: '',
-    },
+      cover_img: 'xxxx',
+      localPath: 'xxxx',
+    }
 
 ]

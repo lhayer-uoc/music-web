@@ -1,75 +1,68 @@
 @import "../../../styles/flex.css";
-
 .container {
-  color: #fff;
-  padding-left: 20px;
-  height: calc(100% - 80px);
-  flex: 1;
-  height: 98%;
+    color: #fff;
+    padding-left: 20px;
+    height: calc(100% - 80px);
+    flex: 1;
+    height: 98%;
 }
 
 .list-title {
-  flex: 2;
+    flex: 2;
 }
 
 .filter-container {
-  flex: 1;
-  justify-content: flex-end;
-  margin-right: 20px;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 .filter-container input {
-  border: none !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
-  background: transparent;
-  font-size: medium;
-  color: rgba(255, 255, 255, 0.9);
-  flex: 1;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+    background: transparent;
+    font-size: medium;
+    color: rgba(255, 255, 255, 0.9);
+    flex: 1;
 }
 
 .filter-container label {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .content {
-  height: 0;
-  flex: 1;
+    height: 0;
+    flex: 1;
 }
 
 .list {
-  flex: 1;
+    flex: 1;
 }
 
 .list .list-header {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .separator {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .list .list-content {
-  overflow-y: auto;
-  flex: 1;
+    overflow-y: auto;
+    flex: 1;
 }
 
 .song-container {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 5px 5px;
-  padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px 5px;
+    padding-left: 20px;
 }
 
 .song-container:hover {
-  background-color: #16a085;
-}
-
-.no-songs-container {
-}
-
-.no-songs-container.no-songs {
+    background-color: #16a085;
 }
