@@ -2,7 +2,7 @@ export interface Song {
   track:number;
   title:string;
   author:string;
-  duration:number;
+  duration:string;
   year:number;
   country:string;
   album:string;
@@ -10,5 +10,4 @@ export interface Song {
   rating:number;
   url:string;
   cover_img: string;
-  localPath: string;
 }
