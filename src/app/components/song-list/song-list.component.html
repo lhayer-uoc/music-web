@@ -1,44 +1,42 @@
 <div class="flex flex-column container">
-  <div class="flex justify-content-between align-items-center">
-    <h3 class="list-title">{{title}}</h3>
-    <div class="flex align-items-center filter-container">
-      <label for="filter">Buscar </label>
-      <input
-        id="filter"
-        type="text"
-        placeholder="Título, artista, album, género"
-        [(ngModel)]="filter"
-        (ngModelChange)="onFilter($event)"
-        name="data"
-        >
+    <div class="flex justify-content-between align-items-center">
+        <h3 class="list-title">{{title}}</h3>
+        <div class="flex align-items-center filter-container">
+            <label for="filter">Buscar </label>
+            <input id="filter" type="text" placeholder="Título, artista, album, género" [(ngModel)]="filter" (ngModelChange)="onFilter($event)" name="data">
+        </div>
     </div>
-  </div>
-  <div class="flex content">
-    <div class="flex flex-column list" *ngIf="songList && songList.length; else noSongs">
-      <div class="flex list-header">
-        <div class="w33">
-          <span># TÍTULO</span>
+    <div class="flex content">
+        <div class="flex flex-column list" *ngIf="songList && songList.length; else noSongs">
+            <div class="flex list-header">
+                <div class="w33">
+                    <span># TÍTULO</span>
+                </div>
+                <div class="w33">
+                    <span>ÁLBUM</span>
+                </div>
+                <div class="w33">
+                    <span>GÉNERO</span>
+                </div>
+                <div>
+                    <div class="w33">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="flex flex-column list-content">
+                <div class="w100calc song-container" *ngFor="let song of songList" (click)="onSelectSong(song)">
+                    <app-song-row [song]="song"></app-song-row>
+                </div>
+            </div>
         </div>
-        <div class="w33">
-          <span>ÁLBUM</span>
-        </div>
-        <div class="w33">
-          <span>GÉNERO</span>
-        </div>
-      </div>
-      <div class="separator"></div>
-      <div class="flex flex-column list-content">
-        <div class="w100calc song-container" *ngFor="let song of songList" (click)="onSelectSong(song)">
-          <app-song-row [song]="song"></app-song-row>
-        </div>
-      </div>
-    </div>
-    <ng-template #noSongs>
-      <div class="no-songs-container">
-        <span class="no-songs">
+        <ng-template #noSongs>
+            <div class="no-songs-container">
+                <span class="no-songs">
           {{noSongsMessage}}
         </span>
-      </div>
-    </ng-template>
-  </div>
+            </div>
+        </ng-template>
+    </div>
 </div>

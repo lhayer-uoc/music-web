@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Song } from 'src/app/interfaces/song';
+import { SelectedSongService } from 'src/app/services/select-song.service';
 
 @Component({
   selector: 'app-song-row',
@@ -8,11 +9,16 @@ import { Song } from 'src/app/interfaces/song';
 })
 export class SongRowComponent implements OnInit {
 
-  constructor() { }
+  constructor(private selectedSongService: SelectedSongService) { }
 
   @Input() song: Song;
 
   ngOnInit(): void {
   }
 
+  playSong(song: Song) {
+    this.selectedSongService.setSelectedSong(song);
+  }
+
+  
 }
