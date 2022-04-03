@@ -1,37 +1,37 @@
 <div class="container flex flex-column">
-  <h3>Detalle de la canción</h3>
-  <div *ngIf="!song; else songDetails">
-    <span>{{noSong}}</span>
-  </div>
-  <ng-template #songDetails>
-    <div class="flex flex-column">
-      <div class="song-detail">
-        <span><strong>Número de pista:</strong> {{song.track}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Título:</strong> {{song.title}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Duración:</strong> {{song.duration}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Autor:</strong> {{song.author}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Año:</strong> {{song.year}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>País:</strong> {{song.country}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Album:</strong> {{song.album}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Género:</strong> {{song.genre}}</span>
-      </div>
-      <div class="song-detail">
-        <span><strong>Puntuación:</strong> {{song.rating}}</span>
-      </div>
+    <h3>Detalle de la canción</h3>
+    <div *ngIf="!song; else songDetails">
+        <span>{{noSong}}</span>
     </div>
-  </ng-template>
+    <ng-template #songDetails>
+        <div class="flex flex-column">
+            <div class="song-detail">
+                <span><strong>Número de pista:</strong> {{song.track}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Título:</strong> {{song.title}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Duración:</strong> {{song.duration}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Autor:</strong> {{song.author}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Año:</strong> {{song.year}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>País:</strong> {{song.country}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Album:</strong> {{song.album}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Género:</strong> {{song.genre}}</span>
+            </div>
+            <div class="song-detail">
+                <span><strong>Puntuación:</strong> {{song.rating}}</span>
+            </div>
+        </div>
+    </ng-template>
 </div>
