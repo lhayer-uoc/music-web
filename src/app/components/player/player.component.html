@@ -1,6 +1,7 @@
-<div class="container" *ngIf="selectedSong">
-    <div class="cover">
-      <img class="img" src="assets/images/neffex.png" />
+<div class="container">
+
+    <div *ngIf="selectedSong; else noSongSelected" class="cover">
+      <img class="img" src="{{getSongCompleteLocalPath()}}" />
     </div>
 
     <div class="info">
@@ -16,4 +17,9 @@
     <div class="btn">
       <audio class="player" src="assets/songs/Fight Back.mp3" type="audio/mp3" controls autoplay></audio>
     </div>
+    <ng-template #noSongSelected>
+      <div>
+        <span>No hay una canción seleccionada</span>
+      </div>
+    </ng-template>
 </div>

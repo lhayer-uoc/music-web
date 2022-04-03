@@ -11,7 +11,6 @@ import { SelectedSongService } from 'src/app/services/select-song.service';
 export class PlayerComponent implements OnInit, OnDestroy {
   constructor(private selectedSongService: SelectedSongService) {}
 
-  stop = true;
   selectedSong: Song;
   currentSelectedSongSubscription: Subscription;
 
@@ -21,9 +20,6 @@ export class PlayerComponent implements OnInit, OnDestroy {
     });
   }
 
-
-  /*Método para conseguir la ruta de la canción
-  
   getSongCompleteLocalPath(): string {
     if (this.selectedSong) {
       const songLocalPath = this.selectedSong.localPath;
@@ -31,7 +27,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
     }
     return '';
 
-  }*/
+  }
 
   ngOnDestroy(): void {
       if (this.currentSelectedSongSubscription) {
