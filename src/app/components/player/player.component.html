@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="cover">
-      <img class="img" src="assets/images/neffex.png" />
+    <div *ngIf="selectedSong; else noSongSelected" class="cover">
+      <img class="img" src="{{getCoverPath()}}" />
     </div>
 
     <div class="info">
@@ -8,12 +8,16 @@
       <div class="infoAuthor">{{selectedSong.author}}</div>
     </div>
     <div class="btn">
-      <img class="button" src="assets/images/aleatorio.png" />
-      <img class="button rotate" src="assets/images/alante.png" />
-      <img class="button" src="assets/images/alante.png" />
-      <img class="button" src="assets/images/repetir.png" />
+      <img class="button" src="assets/images/aleatorio.png" (click)="onRandomSong()" />
+      <img class="button rotate" src="assets/images/alante.png" (click)="onPreviousSong()" />
+      <img class="button" src="assets/images/alante.png" (click)="onNextSong()" />
     </div>
     <div class="btn">
-      <audio class="player" src="assets/songs/Fight Back.mp3" type="audio/mp3" controls autoplay></audio>
+      <audio class="player" src="{{getSongPath()}}" type="audio/mp3" controls autoplay></audio>
     </div>
+    <ng-template #noSongSelected>
+      <div>
+        <span>No hay una canción seleccionada</span>
+      </div>
+    </ng-template>
 </div>
