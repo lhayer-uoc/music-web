@@ -1,15 +1,20 @@
 
 import { Injectable } from '@angular/core';
 import {Song} from 'src/app/interfaces/song';
-import { SONGS } from '../songs';
 import { sample } from 'lodash';
+import data from '../../assets/songs.json';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SongService {
+
+  songs: Song[] = [];
+
   getSongs(): Song[] {
-    return SONGS
+    return data as Song[];
 
   }
 

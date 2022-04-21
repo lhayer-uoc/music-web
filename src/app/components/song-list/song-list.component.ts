@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Song } from 'src/app/interfaces/song';
 import { SongService } from 'src/app/services/song.service';
 import { cloneDeep } from 'lodash';
+import { Nullable } from 'src/app/interfaces/nullable.type';
 
 @Component({
   selector: 'app-song-list',
@@ -12,7 +13,7 @@ export class SongListComponent implements OnInit {
 
   constructor(private songService: SongService) { }
 
-  @Output() selectedSong: EventEmitter<Song> = new EventEmitter();
+  @Output() selectedSong: EventEmitter<Nullable<Song>> = new EventEmitter();
 
   readonly noSongsMessage: string = 'No hay canciones a mostrar.';
   title: string = "Lista de canciones";
