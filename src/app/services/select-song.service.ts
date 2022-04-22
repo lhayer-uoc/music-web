@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ReplaySubject, Subject } from 'rxjs';
+import { Nullable } from '../interfaces/nullable.type';
 import { Song } from '../interfaces/song';
 
 @Injectable({
@@ -7,12 +8,12 @@ import { Song } from '../interfaces/song';
 })
 export class SelectedSongService{
 
-  private selectedSong: Subject<Song> = new ReplaySubject<Song>(1);
+  private selectedSong: Subject<Nullable<Song>> = new ReplaySubject<Nullable<Song>>(1);
   currentSelectedSong = this.selectedSong.asObservable();
 
   constructor() { }
 
-  setSelectedSong(newSelectedSong: Song) {
+  setSelectedSong(newSelectedSong: Nullable<Song>) {
     this.selectedSong.next(newSelectedSong);
   }
 

@@ -1,5 +1,6 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Nullable } from 'src/app/interfaces/nullable.type';
 import { Song } from 'src/app/interfaces/song';
 import { SelectedSongService } from 'src/app/services/select-song.service';
 import { SongService } from 'src/app/services/song.service';
@@ -12,24 +13,15 @@ import { SongService } from 'src/app/services/song.service';
 export class PlayerComponent implements OnInit, OnDestroy {
   constructor(private selectedSongService: SelectedSongService, private songService: SongService) {}
 
-  selectedSong: Song;
+  selectedSong: Nullable<Song>;
   currentSelectedSongSubscription: Subscription;
-  songPath = 'assets/songs/';
   coverPath = 'assets/images/covers/';
 
 
   ngOnInit(): void {
-    this.currentSelectedSongSubscription = this.selectedSongService.currentSelectedSong.subscribe((song: Song) => {
+    this.currentSelectedSongSubscription = this.selectedSongService.currentSelectedSong.subscribe((song: Nullable<Song>) => {
       this.selectedSong = song;
     });
-  }
-
-  public getSongPath(): string {
-    if (this.selectedSong) {
-      const songLocalPath = this.selectedSong.url;
-      return `${this.songPath}${songLocalPath}`;
-    }
-    return '';
   }
 
   public getCoverPath(): string {
@@ -67,6 +59,13 @@ export class PlayerComponent implements OnInit, OnDestroy {
       this.playFirstSong();
     }
 
+  }
+
+  public onStop(): void {
+    if (this.selectedSong) {
+      this.selectedSong = null;
+      this.selectedSongService.setSelectedSong(this.selectedSong);
+    }
   }
 
   playFirstSong(): void {
