@@ -11,7 +11,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SongDetailComponent } from './components/song-detail/song-detail.component';
 import { PlayerComponent } from './components/player/player.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from "@angular/common/http";
+import { DomSanitizer } from "@angular/platform-browser";
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { PlayerComponent } from './components/player/player.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
