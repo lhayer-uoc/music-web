@@ -9,9 +9,9 @@
         <input matInput placeholder="Ex. Everything Feels New" value="{{song.title}}">
       </mat-form-field>
       <br>
-      <h4>Album:</h4>
+      <h4>Álbum:</h4>
       <mat-form-field class="example-album">
-        <mat-label>Album</mat-label>
+        <mat-label>Álbum</mat-label>
         <input matInput placeholder="Ex. Evgeny Bardyuzha" value="{{song.album}}">
       </mat-form-field>
       <br>
@@ -24,9 +24,11 @@
     <mat-card-content>
       <p>Pista Nº: <mat-card-subtitle><i>{{song.track}}</i></mat-card-subtitle></p>
       <hr>
-      <p>Duración: <mat-card-subtitle><i>{{song.duration}}</i></mat-card-subtitle></p>
-      <p>Rating: <mat-card-subtitle><i>{{song.rating}}</i></mat-card-subtitle></p>
-      <p>Año: <mat-card-subtitle><i>{{song.year}}</i></mat-card-subtitle></p>
+      <mat-list-item>
+      <p>Duración: <mat-list-item><i>{{song.duration}}</i></mat-list-item></p>
+      <p>Rating: <mat-list-item><i>{{song.rating}}</i></mat-list-item></p>
+      <p>Año: <mat-list-item><i>{{song.year}}</i></mat-list-item></p>
+    </mat-list-item>
     </mat-card-content>
 </mat-card>
 
