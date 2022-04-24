@@ -3,6 +3,7 @@ import { Song } from 'src/app/interfaces/song';
 import { SongService } from 'src/app/services/song.service';
 import { cloneDeep } from 'lodash';
 import { Nullable } from 'src/app/interfaces/nullable.type';
+import { SelectedSongService } from 'src/app/services/select-song.service';
 
 @Component({
   selector: 'app-song-list',
@@ -11,7 +12,7 @@ import { Nullable } from 'src/app/interfaces/nullable.type';
 })
 export class SongListComponent implements OnInit {
 
-  constructor(private songService: SongService) { }
+  constructor(private songService: SongService, private selectedSongService: SelectedSongService) { }
 
   @Output() selectedSong: EventEmitter<Nullable<Song>> = new EventEmitter();
 
@@ -19,13 +20,12 @@ export class SongListComponent implements OnInit {
   title: string = "Lista de canciones";
   songList: Song[] = [];
   originalSongList: Song[] = [];
-  filter = '';
-
+  filter: '';
+  displayedColumns: string[] = ['action', 'title', 'album', 'genre'];
 
   ngOnInit(): void {
     this.songList = this.getSongList();
     this.originalSongList = cloneDeep(this.songList);
-
   }
 
   public onSelectSong(song: Song): void {
@@ -48,6 +48,10 @@ export class SongListComponent implements OnInit {
       song.album.toLowerCase().includes(filterNormalized) ||
       song.genre.toLowerCase().includes(filterNormalized)
     );
+  }
+
+  onPlaySong(song: Song) {
+    this.selectedSongService.setSelectedSong(song);
   }
 
 }
