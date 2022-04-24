@@ -1,54 +1,51 @@
 <div class="flex flex-column container">
-    <div class="flex justify-content-between align-items-center" id="filter">
-        <h2 class="list-title">{{title}}</h2>
-        <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-              <mat-label for="filter">Buscar</mat-label>
-              <input matInput placeholder="Título, artista, album, género" value="" id="filter" [(ngModel)]="filter" (ngModelChange)="onFilter($event)" name="data">
-            </mat-form-field>
-        </form>
+  <div class="flex justify-content-between align-items-center" id="filter">
+    <h2 class="list-title">{{title}}</h2>
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label for="filter">Buscar</mat-label>
+        <input matInput placeholder="Título, artista, album, género" value="" id="filter" [(ngModel)]="filter" (ngModelChange)="onFilter($event)" name="data">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="flex content">
+
+    <div class="flex list" *ngIf="songList && songList.length; else noSongs">
+
+      <table mat-table [dataSource]="songList" class="mat-elevation-z8" color="primary">
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef class="headerBackground"> Acción </th>
+          <td mat-cell *matCellDef="let song"><img class="button" src="assets/images/play.png" (click)="onPlaySong(song)" /></td>
+
+        </ng-container>
+
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef class="headerBackground"> Titulo </th>
+          <td mat-cell *matCellDef="let song"> {{song.title}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="album">
+          <th mat-header-cell *matHeaderCellDef class="headerBackground"> Album </th>
+          <td mat-cell *matCellDef="let song"> {{song.album}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="genre">
+          <th mat-header-cell *matHeaderCellDef class="headerBackground"> Genero </th>
+          <td mat-cell *matCellDef="let song"> {{song.genre}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+            mat-row
+            (click)="onSelectSong(row)"
+            *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
     </div>
-    <app-song-row></app-song-row>
-    <div class="flex content">
-        <div class="flex flex-column list" *ngIf="songList && songList.length; else noSongs">
-
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" color="primary">
-
-                <ng-container matColumnDef="title">
-                  <th mat-header-cell *matHeaderCellDef class="headerBackground"> Titulo </th>
-                  <td mat-cell *matCellDef="let song"> {{song.title}} </td>
-                </ng-container>
-                
-                <ng-container matColumnDef="album">
-                  <th mat-header-cell *matHeaderCellDef class="headerBackground"> Album </th>
-                  <td mat-cell *matCellDef="let song"> {{song.album}} </td>
-                </ng-container>
-              
-                <ng-container matColumnDef="genre">
-                  <th mat-header-cell *matHeaderCellDef class="headerBackground"> Genero </th>
-                  <td mat-cell *matCellDef="let song"> {{song.genre}} </td>
-                </ng-container>
-              
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr 
-                    mat-row 
-                    (click)="onSelectSong(row)"
-                    *matRowDef="let row; columns: displayedColumns;"></tr>
-            </table>
-
-            <div class="separator"></div>
-            <div class="flex flex-column list-content">
-                <div class="w100calc song-container" *ngFor="let song of songList" (click)="onSelectSong(song)">
-                    <app-song-row [song]="song"></app-song-row>
-                </div>
-            </div>
-        </div>
-        <ng-template #noSongs>
-            <div class="no-songs-container">
-                <span class="no-songs">
-          {{noSongsMessage}}
-        </span>
-            </div>
-        </ng-template>
-    </div>
+    <ng-template #noSongs>
+      <div class="no-songs-container">
+          <span class="no-songs">{{noSongsMessage}}</span>
+      </div>
+    </ng-template>
+  </div>
 </div>

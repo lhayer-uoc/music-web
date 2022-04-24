@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { SongListComponent } from './components/song-list/song-list.component';
-import { SongRowComponent } from './components/song-row/song-row.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SongDetailComponent } from './components/song-detail/song-detail.component';
@@ -21,7 +20,6 @@ import { MatInputModule } from '@angular/material/input';
     AppComponent,
     HomeComponent,
     SongListComponent,
-    SongRowComponent,
     HeaderComponent,
     MenuComponent,
     SongDetailComponent,
