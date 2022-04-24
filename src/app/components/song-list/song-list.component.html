@@ -1,29 +1,41 @@
 <div class="flex flex-column container">
-    <div class="flex justify-content-between align-items-center">
-        <h3 class="list-title">{{title}}</h3>
-        <div class="flex align-items-center filter-container">
-            <label for="filter">Buscar </label>
-            <input id="filter" type="text" placeholder="Título, artista, album, género" [(ngModel)]="filter" (ngModelChange)="onFilter($event)" name="data">
-        </div>
+    <div class="flex justify-content-between align-items-center" id="filter">
+        <h2 class="list-title">{{title}}</h2>
+        <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label for="filter">Buscar</mat-label>
+              <input matInput placeholder="Título, artista, album, género" value="" id="filter" [(ngModel)]="filter" (ngModelChange)="onFilter($event)" name="data">
+            </mat-form-field>
+        </form>
     </div>
+    <app-song-row></app-song-row>
     <div class="flex content">
         <div class="flex flex-column list" *ngIf="songList && songList.length; else noSongs">
-            <div class="flex list-header">
-                <div class="w33">
-                    <span># TÍTULO</span>
-                </div>
-                <div class="w33">
-                    <span>ÁLBUM</span>
-                </div>
-                <div class="w33">
-                    <span>GÉNERO</span>
-                </div>
-                <div>
-                    <div class="w33">
-                        <span></span>
-                    </div>
-                </div>
-            </div>
+
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" color="primary">
+
+                <ng-container matColumnDef="title">
+                  <th mat-header-cell *matHeaderCellDef class="headerBackground"> Titulo </th>
+                  <td mat-cell *matCellDef="let song"> {{song.title}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="album">
+                  <th mat-header-cell *matHeaderCellDef class="headerBackground"> Album </th>
+                  <td mat-cell *matCellDef="let song"> {{song.album}} </td>
+                </ng-container>
+              
+                <ng-container matColumnDef="genre">
+                  <th mat-header-cell *matHeaderCellDef class="headerBackground"> Genero </th>
+                  <td mat-cell *matCellDef="let song"> {{song.genre}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr 
+                    mat-row 
+                    (click)="onSelectSong(row)"
+                    *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
             <div class="separator"></div>
             <div class="flex flex-column list-content">
                 <div class="w100calc song-container" *ngFor="let song of songList" (click)="onSelectSong(song)">

@@ -12,6 +12,9 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SongDetailComponent } from './components/song-detail/song-detail.component';
 import { PlayerComponent } from './components/player/player.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { PlayerComponent } from './components/player/player.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

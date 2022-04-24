@@ -1,8 +1,11 @@
-
+import { Input } from '@angular/core';
 import { Injectable } from '@angular/core';
 import {Song} from 'src/app/interfaces/song';
 import { SONGS } from '../songs';
+import { ReplaySubject, Subject } from 'rxjs';
 import { sample } from 'lodash';
+import { SelectedSongService } from 'src/app/services/select-song.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +15,12 @@ export class SongService {
     return SONGS
 
   }
+  private selectedSong: Subject<Song> = new ReplaySubject<Song>(1);
+  currentSelectedSong = this.selectedSong.asObservable();
+  
+  constructor(private selectedSongService: SelectedSongService) { }
 
-  constructor() { }
+  @Input() song: Song;
 
   public getNextSong(actualSong: Song): Song {
     const actualSongIdx = this.getSongIndex(actualSong);
@@ -52,4 +59,10 @@ export class SongService {
     const songs = this.getSongs();
     return songs.findIndex(song => song.title === searchedSong.title && song.author === searchedSong.author);
   }
+
+  public getActualSong(): Song {
+    const songs = this.getSongs();
+    return songs[0];
+  }
+
 }

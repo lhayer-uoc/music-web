@@ -14,10 +14,12 @@ export class SongRowComponent implements OnInit {
   @Input() song: Song;
 
   ngOnInit(): void {
+
   }
 
   playSong(song: Song) {
     this.selectedSongService.setSelectedSong(song);
+    console.log(this.selectedSongService)
   }
 
   

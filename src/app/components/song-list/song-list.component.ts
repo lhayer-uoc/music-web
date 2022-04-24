@@ -18,13 +18,14 @@ export class SongListComponent implements OnInit {
   title: string = "Lista de canciones";
   songList: Song[] = [];
   originalSongList: Song[] = [];
-  filter = '';
-
+  filter: '';
+  displayedColumns: string[] = ['title', 'album', 'genre'];
+  dataSource: Song[] = [];
 
   ngOnInit(): void {
     this.songList = this.getSongList();
     this.originalSongList = cloneDeep(this.songList);
-
+    this.dataSource = this.songList
   }
 
   public onSelectSong(song: Song): void {
@@ -45,7 +46,8 @@ export class SongListComponent implements OnInit {
       song => song.author.toLowerCase().includes(filterNormalized) ||
       song.title.toLowerCase().includes(filterNormalized) ||
       song.album.toLowerCase().includes(filterNormalized) ||
-      song.genre.toLowerCase().includes(filterNormalized)
+      song.genre.toLowerCase().includes(filterNormalized),
+      console.log(this.songList)
     );
   }
 
