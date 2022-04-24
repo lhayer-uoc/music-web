@@ -86,7 +86,7 @@ export const SONGS : Song[] =[
       duration: '01:06',
       year: 2022,
       album: 'Evgeny Bardyuzha',
-      genre: 'Dance/Electroni',
+      genre: 'Dance/Electronic',
       country: 'Rusia',
       track: 7,
       rating: 2,

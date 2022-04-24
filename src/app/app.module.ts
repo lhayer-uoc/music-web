@@ -13,6 +13,8 @@ import { SongDetailComponent } from './components/song-detail/song-detail.compon
 import { PlayerComponent } from './components/player/player.component';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     MatCardModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

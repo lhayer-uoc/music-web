@@ -1,14 +1,33 @@
 <mat-card class="info" *ngIf="song">
     <mat-card-header>
-        <mat-card-title role="listitem"><q>{{song.title | uppercase}}</q></mat-card-title>
+        <mat-card-title role="listitem"><q>{{song.author | uppercase}}</q></mat-card-title>
     </mat-card-header>
-
+    <div class="example-input">
+      <h4>Título:</h4>
+      <mat-form-field class="example-title">
+        <mat-label>Título</mat-label>
+        <input matInput placeholder="Ex. Everything Feels New" value="{{song.title}}">
+      </mat-form-field>
+      <br>
+      <h4>Album:</h4>
+      <mat-form-field class="example-album">
+        <mat-label>Album</mat-label>
+        <input matInput placeholder="Ex. Evgeny Bardyuzha" value="{{song.album}}">
+      </mat-form-field>
+      <br>
+      <h4>Género:</h4>
+      <mat-form-field class="example-full-genre">
+        <mat-label>Género</mat-label>
+        <input matInput placeholder="Ex. Dance/Electronica" value="{{song.genre}}">
+      </mat-form-field>
+    </div>
     <mat-card-content>
-      <p><mat-card-subtitle><i>{{song.album}}</i></mat-card-subtitle></p>
-      <p>by <strong>{{song.author}}</strong></p>
+      <p>Pista Nº: <mat-card-subtitle><i>{{song.track}}</i></mat-card-subtitle></p>
       <hr>
-      <p>Género: <mat-card-subtitle><i>{{song.genre}}</i></mat-card-subtitle></p>
-      <p>Duración <mat-card-subtitle><i>{{song.duration}}</i></mat-card-subtitle></p>
+      <p>Duración: <mat-card-subtitle><i>{{song.duration}}</i></mat-card-subtitle></p>
+      <p>Rating: <mat-card-subtitle><i>{{song.rating}}</i></mat-card-subtitle></p>
       <p>Año: <mat-card-subtitle><i>{{song.year}}</i></mat-card-subtitle></p>
     </mat-card-content>
 </mat-card>
+
+
