@@ -4,7 +4,6 @@ import { Nullable } from 'src/app/interfaces/nullable.type';
 import { Song } from 'src/app/interfaces/song';
 import { SelectedSongService } from 'src/app/services/select-song.service';
 
-
 @Component({
   selector: 'app-song-detail',
   templateUrl: './song-detail.component.html',
