@@ -16,8 +16,8 @@
 
         <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef class="headerBackground"> Acción </th>
-          <td mat-cell *matCellDef="let song"><img class="button" src="assets/images/play.png" (click)="onPlaySong(song)" /></td>
-
+          <td mat-cell *matCellDef="let song"> <mat-icon class="button" (click)="onPlaySong(song)">play_arrow</mat-icon> </td>
+            <mat-icon></mat-icon>
         </ng-container>
 
         <ng-container matColumnDef="title">
