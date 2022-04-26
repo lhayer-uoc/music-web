@@ -5,6 +5,8 @@ import { Song } from 'src/app/interfaces/song';
 import { SelectedSongService } from 'src/app/services/select-song.service';
 import { SongService } from 'src/app/services/song.service';
 
+
+
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
@@ -67,10 +69,15 @@ export class PlayerComponent implements OnInit, OnDestroy {
       this.selectedSongService.setSelectedSong(this.selectedSong);
     }
   }
+  
 
   playFirstSong(): void {
     const firstSong = this.songService.getFirstSong();
     this.selectedSongService.setSelectedSong(firstSong);
+  }
+
+  playSong(song: Song) {
+    this.selectedSongService.setSelectedSong(song);
   }
 
   ngOnDestroy(): void {
