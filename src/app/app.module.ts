@@ -20,7 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
-import { DomSanitizer } from "@angular/platform-browser";
+
 
 @NgModule({
   declarations: [
