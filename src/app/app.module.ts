@@ -20,6 +20,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 
 @NgModule({
@@ -52,3 +54,17 @@ import { HttpClientModule } from "@angular/common/http";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDlh9X4-6sQqioQf7v7Fz5RBSf5k6UP0FI",
+  authDomain: "music-web-aad6d.firebaseapp.com",
+  projectId: "music-web-aad6d",
+  storageBucket: "music-web-aad6d.appspot.com",
+  messagingSenderId: "869818607857",
+  appId: "1:869818607857:web:7274b9269ee7b966a46150",
+  measurementId: "G-T9MBHH0MP7"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
