@@ -5,13 +5,15 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAiv_nJu0lxEoD8aa3oHGQ7TTGqB1Xw9Yk',
-    authDomain: 'musicjs-824ad.firebaseapp.com',
-    databaseURL: 'https://musicjs.firebaseapp.com/',
-    projectId: 'musicjs-824ad',
-    storageBucket: 'musicjs-824ad.appspot.com',
-    messagingSenderId: '776391405785',
-    appId: '1:776391405785:web:cbfca1aaf2dc9aebe78ec8',
+    projectId: 'music-web-aad6d',
+    appId: '1:869818607857:web:7274b9269ee7b966a46150',
+    databaseURL: 'https://music-web-aad6d-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'music-web-aad6d.appspot.com',
+    locationId: 'europe-west',
+    apiKey: 'AIzaSyDlh9X4-6sQqioQf7v7Fz5RBSf5k6UP0FI',
+    authDomain: 'music-web-aad6d.firebaseapp.com',
+    messagingSenderId: '869818607857',
+    measurementId: 'G-T9MBHH0MP7',
   }
 
 /*
@@ -20,5 +22,5 @@ export const environment = {
  *
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+  */  // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+};

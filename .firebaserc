@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "music-web-aad6d": {
+      "hosting": {
+        "music-web": [
+          "music-web-aad6d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "music-web-aad6d"
+  }
+}

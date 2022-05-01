@@ -20,9 +20,16 @@ import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from "@angular/common/http";
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-
+//Angular Firebase
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AngularFireModule, } from "@angular/fire/compat";
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
   declarations: [
@@ -49,22 +56,16 @@ import { getAnalytics } from "firebase/analytics";
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
+    provideAnalytics(() => getAnalytics()),
+    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),//Importamos FireModule y le pasamos la configuración de enviroment.ts
+    AngularFirestoreModule,
   ],
-  providers: [],
+  providers: [
+    // ScreenTrackingService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDlh9X4-6sQqioQf7v7Fz5RBSf5k6UP0FI",
-  authDomain: "music-web-aad6d.firebaseapp.com",
-  projectId: "music-web-aad6d",
-  storageBucket: "music-web-aad6d.appspot.com",
-  messagingSenderId: "869818607857",
-  appId: "1:869818607857:web:7274b9269ee7b966a46150",
-  measurementId: "G-T9MBHH0MP7"
-};
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
