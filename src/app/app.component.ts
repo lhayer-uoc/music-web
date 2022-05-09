@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
+import { AngularFirestore } from "@angular/fire/compat/firestore";
 
 
 @Component({
@@ -19,4 +20,5 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/next-song.svg")
     );
   }
+  
 }
