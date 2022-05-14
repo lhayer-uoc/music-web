@@ -6,19 +6,31 @@
       <h4>Título:</h4>
       <mat-form-field class="example-title">
         <mat-label>Título</mat-label>
-        <input matInput placeholder="Ex. Everything Feels New" value="{{song.title}}">
+        <input
+          matInput
+          placeholder="Ex. Everything Feels New"
+          [(ngModel)]="song.title"
+          >
       </mat-form-field>
       <br>
       <h4>Álbum:</h4>
       <mat-form-field class="example-album">
         <mat-label>Álbum</mat-label>
-        <input matInput placeholder="Ex. Evgeny Bardyuzha" value="{{song.album}}">
+        <input
+          matInput
+          placeholder="Ex. Evgeny Bardyuzha"
+          [(ngModel)]="song.album"
+        >
       </mat-form-field>
       <br>
       <h4>Género:</h4>
       <mat-form-field class="example-full-genre">
         <mat-label>Género</mat-label>
-        <input matInput placeholder="Ex. Dance/Electronica" value="{{song.genre}}">
+        <input
+          matInput
+          placeholder="Ex. Dance/Electronica"
+          [(ngModel)]="song.genre"
+        >
       </mat-form-field>
     </div>
     <mat-card-content>
@@ -29,6 +41,7 @@
       <p>Rating: <mat-list-item><i>{{song.rating}}</i></mat-list-item></p>
       <p>Año: <mat-list-item><i>{{song.year}}</i></mat-list-item></p>
     </mat-list-item>
+    <button mat-raised-button color="accent" (click)="saveSong()">Guardar</button>
     </mat-card-content>
 </mat-card>
 

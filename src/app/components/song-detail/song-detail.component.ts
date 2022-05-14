@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { Nullable } from 'src/app/interfaces/nullable.type';
 import { Song } from 'src/app/interfaces/song';
 import { SelectedSongService } from 'src/app/services/select-song.service';
+import { SongService } from 'src/app/services/song.service';
 
 @Component({
   selector: 'app-song-detail',
@@ -16,12 +17,21 @@ export class SongDetailComponent implements OnInit, OnDestroy {
   noSong: string = 'No se ha seleccionado ninguna canción';
   currentSelectedSongSubscription: Subscription;
 
-  constructor(private selectedSongService: SelectedSongService) { }
+  constructor(private selectedSongService: SelectedSongService, private songService: SongService) { }
 
   ngOnInit(): void {
     this.currentSelectedSongSubscription = this.selectedSongService.currentSelectedSong.subscribe((song: Nullable<Song>) => {
       this.song = song;
     });
+  }
+
+  public saveSong(): void {
+    try {
+      this.songService.saveSong(this.song);
+      alert('Se han guardado los cambios exitosamente');
+    } catch(error) {
+      alert('Se ha producido un error.');
+    }
   }
 
   ngOnDestroy(): void {

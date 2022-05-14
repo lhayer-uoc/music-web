@@ -5,6 +5,7 @@ import { firstValueFrom, map, Observable, ReplaySubject, Subject } from 'rxjs';
 import { SelectedSongService } from 'src/app/services/select-song.service';
 import { sample } from 'lodash';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/compat/firestore';
+import { Nullable } from '../interfaces/nullable.type';
 
 
 
@@ -19,6 +20,7 @@ export class SongService {
     return this.firestore.collection('Songs').snapshotChanges().pipe(map(snaps =>{
       return snaps.map((snap: any) =>{
         return <Song>{
+          id: snap.payload.doc.id,
           track: snap.payload.doc.get('track'),
           title: snap.payload.doc.get('title'),
           author: snap.payload.doc.get('author'),
@@ -87,6 +89,16 @@ export class SongService {
   public async getActualSong(): Promise<Song> {
     const songs = await firstValueFrom(this.getSongs());
     return songs[0];
+  }
+
+  public saveSong(song: Nullable<Song>): void {
+    if (song) {
+      const songObject = this.firestore.collection('Songs').doc(song.id);
+      songObject.update({title: song.title})
+      songObject.update({album: song.album})
+      songObject.update({genre: song.genre})
+
+    }
   }
 
 }
