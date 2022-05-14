@@ -1,6 +1,6 @@
 <div class="container">
     <div *ngIf="selectedSong; else noSongSelected" class="cover">
-        <img class="img" src="{{getCoverPath()}}" />
+        <img class="img" src="{{selectedSong?.cover_img}}" />
     </div>
     <ng-template #noSongSelected>
         <div>

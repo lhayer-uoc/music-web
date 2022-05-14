@@ -4,6 +4,7 @@ import { SongService } from 'src/app/services/song.service';
 import { cloneDeep } from 'lodash';
 import { Nullable } from 'src/app/interfaces/nullable.type';
 import { SelectedSongService } from 'src/app/services/select-song.service';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-song-list',
@@ -23,8 +24,8 @@ export class SongListComponent implements OnInit {
   filter: '';
   displayedColumns: string[] = ['action', 'title', 'album', 'genre'];
 
-  ngOnInit(): void {
-    this.songList = this.getSongList();
+  async ngOnInit(): Promise<void> {
+    this.songList = await this.getSongList();
     this.originalSongList = cloneDeep(this.songList);
   }
 
@@ -36,8 +37,8 @@ export class SongListComponent implements OnInit {
     this.applyFilter(filter);
   }
 
-  private getSongList(): Song[] {
-    return this.songService.getSongs();
+  private async getSongList(): Promise<Song[]> {
+    return await firstValueFrom(this.songService.getSongs());
   }
 
   private applyFilter(filter: string): void {
@@ -51,6 +52,7 @@ export class SongListComponent implements OnInit {
   }
 
   onPlaySong(song: Song) {
+    console.log(song);
     this.selectedSongService.setSelectedSong(song);
   }
 

@@ -17,7 +17,7 @@ export class PlayerComponent implements OnInit, OnDestroy {
 
   selectedSong: Nullable<Song>;
   currentSelectedSongSubscription: Subscription;
-  coverPath = 'assets/images/covers/';
+
 
 
   ngOnInit(): void {
@@ -26,26 +26,18 @@ export class PlayerComponent implements OnInit, OnDestroy {
     });
   }
 
-  public getCoverPath(): string {
+  public async onRandomSong(): Promise<void> {
     if (this.selectedSong) {
-      const songCoverPath = this.selectedSong.cover_img;
-      return `${this.coverPath}${songCoverPath}`;
-    }
-    return '';
-  }
-
-  public onRandomSong(): void {
-    if (this.selectedSong) {
-      const ramdonSong = this.songService.getRamdonSong();
+      const ramdonSong = await this.songService.getRamdonSong();
       this.selectedSongService.setSelectedSong(ramdonSong);
     } else {
       this.playFirstSong();
     }
   }
 
-  public onPreviousSong(): void {
+  public async onPreviousSong(): Promise<void> {
     if (this.selectedSong) {
-      const previousSong = this.songService.getPreviousSong(this.selectedSong);
+      const previousSong = await this.songService.getPreviousSong(this.selectedSong);
       this.selectedSongService.setSelectedSong(previousSong);
     } else {
       this.playFirstSong();
@@ -53,9 +45,9 @@ export class PlayerComponent implements OnInit, OnDestroy {
 
   }
 
-  public onNextSong(): void {
+  public async onNextSong(): Promise<void> {
     if (this.selectedSong) {
-      const nextSong = this.songService.getNextSong(this.selectedSong);
+      const nextSong = await this.songService.getNextSong(this.selectedSong);
       this.selectedSongService.setSelectedSong(nextSong);
     } else {
       this.playFirstSong();
@@ -69,10 +61,10 @@ export class PlayerComponent implements OnInit, OnDestroy {
       this.selectedSongService.setSelectedSong(this.selectedSong);
     }
   }
-  
 
-  playFirstSong(): void {
-    const firstSong = this.songService.getFirstSong();
+
+  async playFirstSong(): Promise<void> {
+    const firstSong = await this.songService.getFirstSong();
     this.selectedSongService.setSelectedSong(firstSong);
   }
 
